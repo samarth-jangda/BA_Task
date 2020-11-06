@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main_1.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-contact3" style="background-image: url('/static/images/bac-01.jpg');">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+
+					<span class="contact3-form-title">
+						Upload Data
+					</span>
+
+					<div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio m-r-42">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" checked="checked">
+							<label class="label-radio3" for="radio1">
+								Upload Books
+							</label>
+						</div>
+
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote">
+							<label class="label-radio3" for="radio2">
+								Upload Book Data
+							</label>
+						</div>
+					</div>
+                    <form method = "post" enctype=multipart/form-data action="/upload">
+
+						<input class="input3" type="file" name="file">
+						<input class="input3" type="submit"  value="Upload">
+						<span class="focus-input3"></span>
+                    </form>
+
+					<form method="POST" enctype=multipart/form-data  action="/lib">
+					<div class="wrap-input3 input3 validate input">
+						<div class="wrap-input100 validate-input m-b-20" data-validate="Enter bookname">
+							<input class="input3" type="text" name="bookname" placeholder="bookname">
+                            <span class="focus-input3"></span>
+						</div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3 validate input">
+						<div class="wrap-input100 validate-input m-b-25" data-validate = "author">
+                            <input class="input3" type="text" name="author" placeholder="author">
+							<span class="focus-input3"></span>
+                        </div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3 validate-input">
+						<div class="wrap-input100 validate-input m-b-25" data-validate = "genre">
+							<input class="input3" type="text" name="genre" placeholder="Genre">
+                            <span class="focus-input3"></span>
+                        </div>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-input3 input3 validate-input">
+						<div class="wrap-input100 validate-input m-b-25" data-validate = "publshed_yr">
+							<input class="input3" type="text" name="published_yr" placeholder="published_yr">
+                            <span class="focus-input3"></span>
+                        </div>
+						<span class="focus-input3"></span>
+					</div>
+
+
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+                        Submit
+                        </button>
+                    </div>
+				    </form>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="/static/js/main_a.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
